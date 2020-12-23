@@ -12,20 +12,15 @@ void swap(int *a , int *b)
 }
 void solve(int *A,int *B,int n,int m)
 {
-    int i{0},j{0};
-    int temp{0};
-    for(i=0,j=0;i<n and j<m;)
+    for(int i=0;i<n;i++)
     {
-        if(A[i] > B[j])
-        {
-            swap(&A[i],&B[j]);
-            sort(B,B+m);
-            j =-1;
-            j++;
-        }
-        i++;
-        
+        if(A[i]>B[0])
+            {
+                swap(&A[i],&B[0]);
+                sort(B,B+m);
+            }
     }
+
     for(int i=0;i<n;i++)
             cout<<A[i]<<" ";
 
